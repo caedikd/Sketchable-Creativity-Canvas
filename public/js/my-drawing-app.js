@@ -1,9 +1,16 @@
 /* The code for our drawing application! 
 Feel free to delete any/all of it and replace with your own functionality. */
 
+
+
 var path;
 var currentColor = 'black'
 var currentWidth = 5
+
+function onResize(event) {
+	// Whenever the window is resized, recenter the path:
+	path.position = view.center;
+}
 
 tool.onMouseDown = function(event) { //This code in this function is called whenever the mouse is clicked.
     path = new Path();     // Create a new path each time.

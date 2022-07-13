@@ -23,25 +23,71 @@
   <!-- Link to our Paperscript file containing our custom drawing app code, and associate it with the "my-canvas" Canvas Object defined in the HTML layout below-->
   <script type="text/paperscript" src="js/my-drawing-app.js" canvas="my-canvas"></script>
 
+  <!-- added CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    /* body {
+      margin-left:300px;
+    } */
+
+  </style>
+
   </head>
 
   <body>
     <!-- Our row of buttons -->
-    <button type="button" class="btn" id = "default" >
-      <span class="material-symbols-outlined"> edit</span>
-    </button>
-
-    <button type="button" class="btn btn-success" id = "thick-green" >
-      <span class="material-symbols-outlined">format_paint</span>
-    </button>
-
-    <button type="button" class="btn" id = "eraser" >
-      <span class="material-symbols-outlined">circle</span>
-    </button>
-
+    <div class="marginbtn">
+      <button type="button" class="btn" id = "default" >
+        <span class="material-symbols-outlined"> edit</span>
+      </button>
+  
+      <button type="button" class="btn btn-success" id = "thick-green" >
+        <span class="material-symbols-outlined">format_paint</span>
+      </button>
+  
+      <button type="button" class="btn" id = "eraser" >
+        <span class="material-symbols-outlined">circle</span>
+      </button>
+  
+    </div>
+    
     <br> <!-- I used a simple line break here, but you might want to consider using a more sophisticated layout/formatting solution (e.g. Bootstrap rows and columns), especially if there's a lot of elements you want to cleanly organize, position, and format in your app. -->
 
+  <!-- This canvas is very important, it allows us to draw on paper.js kind of like a container -->
+
+
+  <div id="mySidemenu" class="sidemenu">
+    <!-- <button type="button"  onclick="closeSM()">button</button> -->
+      <div class="sm-wrapper">
+        links
+      </div>
+
+  </div>
+  <!-- Using a wrapper to align content (very important) DONE BY CAEDI-->
+  <main>
+    <!-- <button type="button" onclick="t()">button</button> -->
+
     <canvas id="my-canvas" width = "800" height = "600"></canvas> <!-- our Canvas object -->
+  </main> 
+
+  <script>
+    function openSM() {
+      document.getElementById("mySidemenu").style.width = "20%";
+      document.getElementById("my-canvas").style.marginLeft = "20%";
+    }
+
+    function closeSM() {
+      document.getElementById("mySidemenu").style.width = "0";
+      document.getElementById("my-canvas").style.marginLeft = "0";
+    }
+
+  
+  </script>
 
   </body>
 

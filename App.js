@@ -33,11 +33,11 @@ app.get("/", function (req, res) {
 });
 
 //depending on what url extension the user navigates to, send them the respective html file. 
-/* // this example app has no additional pages besides the index, so I've commented these out for now.
-app.get('/a', function (req, res) {
-    res.sendFile(publicPath + '/a.html');
+// this example app has no additional pages besides the index, so I've commented these out for now.
+app.get('/instructions', function (req, res) {
+    res.sendFile(publicPath + '/instructions.html');
 });
-*/
+
 
 
 //run this server by entering "node App.js" using your command line. 
