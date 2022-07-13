@@ -23,8 +23,22 @@ body { /*default body style (black Verdana)*/
 
 /* Added CSS by Caedi, taken directly from Figma */
 /* Side menu part */
+.sm-wrapper-white {
+  margin-top: 50px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px black;
+  color: #FFFFFF;
+  text-align: center;
+}
+
 .sm-wrapper {
-  margin-top: 100px;
+  margin-top: 50px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  /* text-shadow: 2px 2px 4px black; */
+  color: black;
+  text-align: center;
 }
 
 .sidemenu {
@@ -37,7 +51,7 @@ body { /*default body style (black Verdana)*/
   background-color: #E4C3AD;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 10px;
+  padding-top: 0px;
 
 }
 
@@ -59,16 +73,6 @@ body { /*default body style (black Verdana)*/
 }
 
 /* side menu hover effect */
-.sm-wrapper {
-  z-index: -1;
-  position: absolute;
-  left: 0%;
-  width: 0%;
-  height: 50px;
-  content: '';
-  transition: width 0.35s ease-in-out;
-}
-
 .sm-wrapper a:hover:after{
   width: 10%;
 }
