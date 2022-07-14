@@ -1,3 +1,5 @@
+/* Added CSS by Caedi, taken directly from Figma */
+
 * {
   box-sizing: border-box;
 }
@@ -11,18 +13,55 @@ body { /*default body style (black Verdana)*/
   font-family:Verdana;
   color:#000000; 
   background-color: #FAE1DF;
-  /* display: flex; */
-
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
-.marginbtn {
-  margin-left:300px;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px; /* Height of navbar */
+  width: 300px;
+  z-index: 600;
 }
 
 /* Top bar */
 .mode {
+  float: left;
   margin-left: 20px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight:700;
+  font-size: 25px;
+  margin-right: 400px;
+}
+
+
+
+.save-share {
+  float:left; 
+  line-height: 35px; 
+  width: 60px;
+  height: 35px;
+  margin-top: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 10px;
+  background-color: #FF7373;
+  color: white;
+ 
+
+}
+
+.inspire-me {
+  display:inline; 
+
+ float:right;
+ margin-right: 320px;
   color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 25px;
@@ -37,12 +76,15 @@ body { /*default body style (black Verdana)*/
 }
 
 
-/* Added CSS by Caedi, taken directly from Figma */
+
+
+
 /* Side menu part */
 .sm-wrapper-white {
   margin-top: 50px;
   font-family: 'Raleway', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: 700;
   text-shadow: 2px 2px 4px black;
   color: #FFFFFF;
   text-align: center;
@@ -51,8 +93,8 @@ body { /*default body style (black Verdana)*/
 .sm-wrapper {
   margin-top: 50px;
   font-family: 'Raleway', sans-serif;
-  font-size: 25px;
-  /* text-shadow: 2px 2px 4px black; */
+  font-weight: 600;
+  font-size: 20px;
   color: black;
   text-align: center;
 }
@@ -64,6 +106,7 @@ body { /*default body style (black Verdana)*/
   z-index: 1;
   top: 0;
   left: 0;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
   background-color: #E4C3AD;
   overflow-x: hidden;
   transition: 0.5s;
@@ -88,7 +131,7 @@ body { /*default body style (black Verdana)*/
   margin-left: 50px;
 }
 
-/* side menu hover effect */
+/* side menu hover effect currently not implemented*/
 .sm-wrapper a:hover:after{
   width: 10%;
 }
@@ -99,22 +142,28 @@ body { /*default body style (black Verdana)*/
 }
 
 
+/* The canvas CSS*/
       main {
         height: 100vh;
         display: flex;
         margin-top: 3%;
         justify-content: center;
         margin-left: 300px;
-
       }
 
       canvas {
+        width: 800px;
+        height: 550px;
         background-color: #FFFFFF;
         border: 5px solid;
         border-color: #546A7B;
         border-radius: 20px;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+
 }
 
+
+/* EVERYTHING UNDER HERE WAS WRITTEN BY SHM */
 
 .menu { /* menu style */
   float: left;
