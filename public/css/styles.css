@@ -35,13 +35,15 @@ body { /*default body style (black Verdana)*/
   font-family: 'Raleway', sans-serif;
   font-weight:700;
   font-size: 25px;
-  margin-right: 400px;
+  /* margin-right: 400px; */
 }
 
 
 
-.save-share {
-  float:left; 
+.save-share{
+  float: left; 
+  position: relative;
+      left: 30%;
   line-height: 35px; 
   width: 60px;
   height: 35px;
@@ -53,18 +55,44 @@ body { /*default body style (black Verdana)*/
   margin-right: 10px;
   background-color: #FF7373;
   color: white;
- 
-
+  text-decoration: none;
 }
 
-.inspire-me {
-  display:inline; 
+.save-share:hover {
+  loat:left; 
+  line-height: 35px; 
+  width: 60px;
+  height: 35px;
+  margin-top: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 10px;
+  background-color: #b64d4d;
+  color: white;
+  text-decoration: none;
+}
 
+.inspire-me, .inspire-me:hover{
+  display:inline; 
  float:right;
  margin-right: 320px;
   color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 25px;
+  text-decoration: none;
+}
+
+.inspire-me:hover{ 
+  display:inline; 
+  float:right;
+  margin-right: 320px;
+   color:#FAE1DF;
+   font-family: 'Raleway', sans-serif;
+   font-size: 25px;
+   text-decoration: none;
+
 }
 
 .topbar {
@@ -149,17 +177,134 @@ body { /*default body style (black Verdana)*/
         margin-top: 3%;
         justify-content: center;
         margin-left: 300px;
+        position: relative;
+
       }
 
-      canvas {
+      #my-canvas {
         width: 800px;
         height: 550px;
         background-color: #FFFFFF;
         border: 5px solid;
         border-color: #546A7B;
         border-radius: 20px;
-        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+        box-shadow: 0 5px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+}
 
+/* POP-UPs CSS */
+.popup {
+  margin-top: 10%;
+  width: 500px;
+  height: 340px;
+  position: absolute;
+  background-color: #9EA3B0;
+  border: 5px solid;
+  border-color: #546A7B;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.bold {
+  margin-top: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+.text {
+  display: inline-block;
+  margin-top: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        /* margin-left: 100px; */
+}
+
+.text-boxes {
+  overflow: visible;
+  display: inline-block;
+  margin-top: 20px;
+  width: 160px;
+  height: 16px;
+  background-color: #E0E0E0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777777;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.refresh {
+  padding-bottom: -4px;
+   display: inline-block;
+  background-color: Transparent; 
+  background-repeat:no-repeat; 
+  border: none; 
+  margin-top: 2px; color: black;
+}
+
+.go{
+  /* position: relative; */
+  width: 60px;
+  height: 35px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  border-color: #FF7373; 
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 20px;
+  background-color: #FF7373;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 4px;
+  outline:none;
+}
+
+.go:hover {
+  width: 60px;
+  height: 35px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 20px;
+  border-color: #b64d4d; 
+  background-color: #b64d4d;
+  color: white;
+  text-decoration: none;
+  outline:none;
+}
+
+.go:active {
+  outline:none;
+}
+
+button {
+  border:none;
+}
+
+
+/* Timer and drawing reminder */
+.reminder {
+  display: none;
+  margin-top: -40px;
+  width: 800px;
+  height: 40px;
+
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  background-color: #9EA3B0;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 8px;
+  border-radius: 20px;
+  z-index: 10;
 }
 
 
@@ -188,7 +333,7 @@ body { /*default body style (black Verdana)*/
 
 .center { /*centers an element*/
   position: relative;
-  top: 50%;
+  /* top: 50%; */
   left: 50%; 
   transform: translate(-50%, 0%);
 }
