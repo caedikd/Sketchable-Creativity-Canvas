@@ -45,8 +45,8 @@
         <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
       </svg></div> -->
 
-      <a href="#" class="save-share">share</a>
-      <a href="#" class="save-share">save</a>
+      <a href="#" class="save-share"><button onclick="share()" style="background-color:transparent; color:white; outline:none;">share</button></a>
+      <a href="#" class="save-share"><button onclick="saved()" style="background-color:transparent; color:white; outline:none;">save</button></a>
       <a href="paintmode.html" class="inspire-me"> paint mode</a>
       
     </div>
@@ -148,6 +148,8 @@
     var randNoun;
     var randVerb;
     var randNoun2;
+    var loc = window.location.pathname;
+
 
     const popup = document.getElementById('popup');
     const go = document.getElementById('go');
@@ -181,11 +183,17 @@
 
     function popup1() {
         if (popup.style.display === "none") {
-            popup.style.display = "block";
-            
+            popup.style.display = "block"; 
         }
     }
 
+    function saved() {
+        alert("saved to" + loc);
+    }
+
+    function share() {
+        alert("shared to instagram user: @user123");
+    }
 
 
   
