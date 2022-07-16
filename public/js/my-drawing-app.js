@@ -10,6 +10,12 @@ var erased = false;
 // var myCircle = new Path.Circle(new Point(100, 70), 50);
 // myCircle.fillColor = currentColor;
 
+// // Changing the color
+// var changeColor = (color) => {
+//     currentColor = color;
+//     console.log(currentColor)
+// } 
+
 function onResize(event) {
 	// Whenever the window is resized, recenter the path:
 	path.position = view.center;
@@ -25,6 +31,11 @@ tool.onMouseDown = function(event) { //This code in this function is called when
 tool.onMouseDrag = function(event) {
     path.add(event.point); //Add points to the path as the user drags their mouse.
 }
+
+$('#pen-color').on('click', function (e) {
+    console.log($(this).val())
+    currentColor = '' + $(this).val();
+})
 
 $('#default').on('click', function (e) { //jquery click event code for our "pencil" button.
     currentColor = 'black';  //change the color to black

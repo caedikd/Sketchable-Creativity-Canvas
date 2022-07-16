@@ -66,16 +66,27 @@ justify-content: center;
   text-align: center;
   margin: 15px;
   margin-bottom: 0px;
-
 }
-/* .btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  border-radius: 35px;
-  font-size: 12px;
-  text-align: center;
-} */
+
+/* Colors */
+input[type="color"] {
+	/* opacity: 60; */
+	display: block;
+	width: 36px;
+	height: 36px;
+	border: 0px;
+}
+#color-picker-wrapper {
+	display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#svg-plus {
+  position:absolute;
+  display:inline-block;
+
+    }
 
 .sidebar {
   position: fixed;
@@ -103,7 +114,7 @@ justify-content: center;
 .save-share{
   float: left; 
   position: relative;
-      left: 30%;
+  left: 30%;
   line-height: 35px; 
   width: 60px;
   height: 35px;
@@ -237,11 +248,10 @@ justify-content: center;
       main {
         height: 100vh;
         display: flex;
-        margin-top: 3%;
+        margin-top: 2%;
         justify-content: center;
         margin-left: 300px;
         position: relative;
-
       }
 
       canvas {
@@ -256,7 +266,7 @@ justify-content: center;
 
 /* POP-UPs CSS */
 .popup {
-  margin-top: 10%;
+  margin-top: 9%;
   width: 500px;
   height: 340px;
   position: absolute;
@@ -354,6 +364,7 @@ justify-content: center;
 }
 
 .go:active {
+  border: none;
   outline:none;
 }
 
