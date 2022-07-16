@@ -49,8 +49,8 @@
         <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
       </svg></div> -->
 
-      <a href="#" class="save-share">share</a>
-      <a href="#" class="save-share">save</a>
+      <a href="#" class="save-share"><button onclick="share()" style="background-color:transparent; color:white; outline:none;">share</button></a>
+      <a href="#" class="save-share"><button onclick="saved()" style="background-color:transparent; color:white; outline:none;">save</button></a>
       <a href="/inspire-me.html" class="inspire-me"> inspire me</a>
       
     </div>
@@ -94,9 +94,24 @@
     <!-- <button type="button" onclick="t()">button</button> -->
 
     <canvas id="my-canvas" width = "800" height = "600"></canvas> <!-- our Canvas object -->
+
   </main> 
 
   <script>
+    var loc = window.location.pathname;
+
+
+    function saved() {
+        alert("saved to" + loc);
+    }
+
+    function share() {
+        alert("shared to instagram user: @user123");
+    }
+
+    go.onclick = function () {
+        popup.style.display = "none";
+    }
 
   
   </script>

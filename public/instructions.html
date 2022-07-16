@@ -33,22 +33,21 @@
   <body>
     <!-- top bar -->
     <div class="topbar">
-      <div class="mode"> inspired mode</div>
+        <div class="mode" style="margin-right: 36px"> paint mode</div>
 
-      <!-- UNDO REDO ONLY IF WE HAVE TIME -->
-      <!-- <div class="undo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
-        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
-      </svg></div>
-      <div class="redo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
-        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
-      </svg></div> -->
-
-      <a href="#" class="save-share"><button onclick="share()" style="background-color:transparent; color:white; outline:none;">share</button></a>
-      <a href="#" class="save-share"><button onclick="saved()" style="background-color:transparent; color:white; outline:none;">save</button></a>
-      <a href="paintmode.html" class="inspire-me"> paint mode</a>
-      
+        <!-- UNDO REDO ONLY IF WE HAVE TIME -->
+        <!-- <div class="undo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+          <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+        </svg></div>
+        <div class="redo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+          <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+        </svg></div> -->
+  
+        <a href="#" class="save-share"><button onclick="share()" style="background-color:transparent; color:white; outline:none;">share</button></a>
+        <a href="#" class="save-share"><button onclick="saved()" style="background-color:transparent; color:white; outline:none;">save</button></a>
+        <a href="/inspire-me.html" class="inspire-me"> inspire me</a>
     </div>
 
 
@@ -98,12 +97,20 @@
             <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
           </svg></a>
 
-        <div class="bold">get inspired!</div>
-        <div class="text" style="text-align: left; margin-left: 100px;">draw a</div>
-        <div class="text-boxes">
-            <div class="random" id="noun"> noun </div>
-        </div>
-        <button type="button" class="refresh" onclick="changeNoun()" value="change noun">
+        <div class="bold" style="margin-left: 23px;">welcome!</div>
+        <div class="ins-text" style="text-align: center;">enjoy sketchable, the simple yet effective paint platform.</div>
+        <div class="bold" style="  font-size: 18px; text-align: center; margin-top: 20px;   display:block">instructions:</div>
+        <div class="ins-text" style="text-align: center;">choose a following mode</div>
+        <div class="ins-text" style="text-align: center;"><span style="font-weight: 700;">paint mode:</span> classic canvas, reignite your love for art!</div>
+        <div class="ins-text" style="text-align: center;"><span style="font-weight: 700;">inspired mode:</span> get inspired to draw something unique</div>
+         <div class="ins-text"> <button type="button"  style="margin-left: 23px; margin-top: 20px; text-align: center;" onclick="go()" class="go" id="go">GO</button>
+         </div> 
+
+
+
+
+
+        <!-- <button type="button" class="refresh" onclick="changeNoun()" value="change noun">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
                 <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
@@ -128,13 +135,8 @@
                 <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
                 <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
               </svg>
-        </button>
+        </button> -->
 
-        <div class="typed" style="font-family: 'Raleway', sans-serif; font-weight: 400; display:inline-block; position: relative;     left: -10%;         top:20%">
-            you have 5:00
-            <button type="button"  onclick="go()" class="go" id="go">GO</button>
-        </div>
-        
 
     </div>
 
@@ -177,8 +179,6 @@
 
     go.onclick = function () {
         popup.style.display = "none";
-        remind.style.display = "block";
-            remind.innerHTML +=  ' ' + randNoun + ' ' + randVerb + ' ' + randNoun2;
     }
 
     function popup1() {
