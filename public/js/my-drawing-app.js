@@ -76,6 +76,9 @@ tool.onMouseDrag = function(event) {
 
 // Make shapes
 $('#circle').on('click', function (e) {
+    if (square === true){
+        square = false;
+    }
     circle = true;
 })
 
