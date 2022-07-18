@@ -1,3 +1,5 @@
+Video: https://www.youtube.com/watch?v=GGBfYyfGrx8
+
 Hello friend! 
 This is Starter code for Project 2: Creativity Canvas, lovingly prepared by Shm Garanganao Almeda for CS160 User Interface Design & Development Summer 2022 at UC Berkeley.
 *You are not required to use ANY of this example code.* I just thought it might be helpful to have something to work off of.
