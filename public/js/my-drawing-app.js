@@ -6,15 +6,9 @@ var currentColor = 'black';
 var lastColor = "black";
 var currentWidth = 5;
 var erased = false;
+var circle = false;
+var square = false;
 
-// var myCircle = new Path.Circle(new Point(100, 70), 50);
-// myCircle.fillColor = currentColor;
-
-// // Changing the color
-// var changeColor = (color) => {
-//     currentColor = color;
-//     console.log(currentColor)
-// } 
 
 function onResize(event) {
 	// Whenever the window is resized, recenter the path:
@@ -23,19 +17,103 @@ function onResize(event) {
 
 tool.onMouseDown = function(event) { //This code in this function is called whenever the mouse is clicked.
     path = new Path();     // Create a new path each time.
-    path.add(event.point);
-    path.strokeColor = currentColor;
-    path.strokeWidth = currentWidth;
-    console.log(event.point); //this commands log to the Console the coordinates of the mouse click. Feel free to delete it! 
+    
+    // Adding the circle
+    if (circle === true) {
+        path.add(new Shape.Circle({
+            center: event.point,
+            radius: 30,
+            strokeColor: currentColor,
+            fillColor: currentColor
+        }));
+        console.log(event.point); //this commands log to the Console the coordinates of the mouse click. Feel free to delete it!
+    }
+    
+    // Added the square
+    else if (square === true) {
+        path.add(new Shape.Rectangle({
+            point: event.point,
+            size: [50, 50],
+            strokeColor: currentColor,
+            fillColor: currentColor
+        }));
+        console.log(event.point); //this commands log to the Console the coordinates of the mouse click. Feel free to delete it!
+    }
+   
+    // normal pen tool
+    else {
+        path.add(event.point);
+        path.strokeColor = currentColor;
+        path.strokeWidth = currentWidth;
+        console.log(event.point); //this commands log to the Console the coordinates of the mouse click. Feel free to delete it!
+    }
+    
+
+    
+
 }
 tool.onMouseDrag = function(event) {
+    if (square === true) {
+        path.add(new Shape.Rectangle({
+            point: event.point,
+            size: [50, 50],
+            strokeColor: currentColor,
+            fillColor: currentColor
+        }));
+    }
+    else if (circle === true) {
+        path.add(new Shape.Circle({
+            center: event.point,
+            radius: 30,
+            strokeColor: currentColor,
+            fillColor: currentColor
+        }));
+    }
     path.add(event.point); //Add points to the path as the user drags their mouse.
+
 }
 
+
+// Make shapes
+$('#circle').on('click', function (e) {
+    circle = true;
+})
+
+$('#square').on('click', function (e) {
+    if (circle === true){
+        circle = false;
+    }
+    square = true;
+})
+
+
+// colors
 $('#pen-color').on('click', function (e) {
     console.log($(this).val())
     currentColor = '' + $(this).val();
 })
+$('#red').on('click', function (e) {
+    currentColor = '#FA5659';
+})
+$('#orange').on('click', function (e) {
+    currentColor = "#F7A34A";
+})
+$('#yellow').on('click', function (e) {
+    currentColor = '#F8D042';
+})
+$('#green').on('click', function (e) {
+    currentColor = '#62B64D';
+})
+$('#blue').on('click', function (e) {
+    currentColor = '#227694';
+})
+$('#purple').on('click', function (e) {
+    currentColor = '#484572';
+})
+$('#pink').on('click', function (e) {
+    currentColor = '#DC488A';
+})
+
 
 $('#default').on('click', function (e) { //jquery click event code for our "pencil" button.
     currentColor = 'black';  //change the color to black
@@ -48,6 +126,8 @@ $('#thick-green').on('click', function (e) { //jquery button click code for our 
 
 // Sizing
 $('#xs').on('click', function (e) { //jquery button click code for our "green paint" button.
+    circle = false;
+    square = false;
     if (erased === true) {
         currentColor = lastColor;
     } 
@@ -55,6 +135,8 @@ $('#xs').on('click', function (e) { //jquery button click code for our "green pa
     erased = false;
 })
 $('#sm').on('click', function (e) { //jquery button click code for our "green paint" button.
+    circle = false;
+    square = false;
     if (erased === true) {
         currentColor = lastColor;
     } 
@@ -63,6 +145,8 @@ $('#sm').on('click', function (e) { //jquery button click code for our "green pa
 
 })
 $('#md').on('click', function (e) { //jquery button click code for our "green paint" button.
+    circle = false;
+    square = false;
      if (erased === true) {
         currentColor = lastColor;
     } 
@@ -71,6 +155,8 @@ $('#md').on('click', function (e) { //jquery button click code for our "green pa
 
 })
 $('#lg').on('click', function (e) { //jquery button click code for our "green paint" button.
+    circle = false;
+    square = false;
     if (erased === true) {
         currentColor = lastColor;
     } 
@@ -82,24 +168,32 @@ $('#lg').on('click', function (e) { //jquery button click code for our "green pa
 // Eraser Sizing
 $('#eraser-md').on('click', function (e) { //jquery button click code for our eraser button.
     lastColor = currentColor;
+    circle = false;
+    square = false;
     currentColor = 'white';
     currentWidth = 20;
     erased = true;
 })
 $('#eraser-sm').on('click', function (e) { //jquery button click code for our eraser button.
     lastColor = currentColor;
+    circle = false;
+    square = false;
     currentColor = 'white';
     currentWidth = 10;
     erased = true;
 })
 $('#eraser-lg').on('click', function (e) { //jquery button click code for our eraser button.
     lastColor = currentColor;
+    circle = false;
+    square = false;
     currentColor = 'white';
     currentWidth = 50;
     erased = true;
 })
 $('#eraser-xs').on('click', function (e) { //jquery button click code for our eraser button.
     lastColor = currentColor;
+    circle = false;
+    square = false;
     currentColor = 'white';
     currentWidth = 5;
     erased = true;

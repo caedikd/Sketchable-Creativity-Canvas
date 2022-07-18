@@ -58,62 +58,80 @@
     <br> 
 
     <!-- This canvas is very important, it allows us to draw on paper.js kind of like a container -->
-    <div id="mySidemenu" class="sidemenu">
-        <div class="sm-wrapper-white">challenge mode</div>
-       
-        <!-- THIS IS WHERE TO ADD COLORS LOOK AT STYLES.CSS FOR SIZING DETAILS CTRL F: input[type="color"] { -->
-        <div class="sm-wrapper">canvas colors</div>
-        <div id="color-picker-wrapper">
-          <!-- This is where to add like typical colors, just make a div box with the same specifics as input[type="color"]
-            Then add specifications in my-drawing-app.js  -->
-  
-          <!-- This is a color picker, works clunky so you have to press a color, 
-            press enter, then press again to get the color on your brush -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" id="svg-plus" class="bi bi-plus" viewBox="0 0 16 16">
-            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-            </svg>
-          <input type="color" id="pen-color" value="#FF7373">
-        </div>    
-  
-        <!-- Where I added the thickness of the pen -->
-        <div class="sm-wrapper">pen thickness</div>
-        <div class="pen-thickness">
-          <button type="button" class="btn btn-circle btn-xs btn-secondary"  id = "xs" >
-              <span class="material-symbols-outlined"></span>
-            </button>
-            <button type="button" class="btn btn-circle btn-sm btn-secondary"  id = "sm" >
-              <span class="material-symbols-outlined"></span>
-            </button>
-            <button type="button" class="btn btn-circle btn-md btn-secondary"  id = "md" >
-              <span class="material-symbols-outlined"></span>
-            </button>
-            <button type="button" class="btn btn-circle btn-lg btn-secondary"  id = "lg" >
-              <span class="material-symbols-outlined"></span>
-            </button>
-        </div>
-  
-  
-        <!-- The eraser tool, I used the same format as the thickness -->
-        <div class="sm-wrapper">eraser</div>
-        <div class="pen-thickness">
-          <button type="button" class="btn btn-circle btn-xs btn-light"  id = "eraser-xs" >
-            <span class="material-symbols-outlined"></span>
-          </button>
-            <button type="button" class="btn btn-circle btn-sm btn-light"  id = "eraser-sm" >
-              <span class="material-symbols-outlined"></span>
-            </button>
-            <button type="button" class="btn btn-circle btn-md btn-light"  id = "eraser-md" >
-              <span class="material-symbols-outlined"></span>
-            </button>
-            <button type="button" class="btn btn-circle btn-lg btn-light"  id = "eraser-lg" >
-              <span class="material-symbols-outlined"></span>
-            </button>
-        </div>
-        
-  
-        <!-- Where we will add shapes -->
-        <div class="sm-wrapper">shapes</div>
+  <div id="mySidemenu" class="sidemenu">
+    <a href="challengemode.html"><div class="sm-wrapper-white">challenge mode</div></a>
+   
+    <!-- THIS IS WHERE TO ADD COLORS LOOK AT STYLES.CSS FOR SIZING DETAILS CTRL F: input[type="color"] { -->
+    <div class="sm-wrapper">canvas colors</div>
+    <div id="color-picker-wrapper">
+      <!-- This is where to add like typical colors, just make a div box with the same specifics as input[type="color"]
+        Then add specifications in my-drawing-app.js  -->
+        <div class="colors" style="background-color:#FA5659" id="red"></div>
+        <div class="colors" style="background-color:#F7A34A" id="orange"></div>
+        <div class="colors" style="background-color:#F8D042" id="yellow"></div>
+        <div class="colors" style="background-color:#62B64D" id="green"></div>
+
+      </div>
+
+      <div id="color-picker-wrapper" style="margin-bottom: 0px;">
+        <div class="colors" style="background-color:#227694" id="blue"></div>
+        <div class="colors" style="background-color:#484572" id="purple"></div>
+        <div class="colors" style="background-color:#DC488A" id="pink"></div>
+        <!-- This is a color picker, works clunky so you have to press a color, 
+        press enter, then press again to get the color on your brush -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" id="svg-plus" class="bi bi-plus" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg>
+      <input type="color" id="pen-color" value="#FF7373">
+    </div>    
+
+    <!-- Where I added the thickness of the pen -->
+    <div class="sm-wrapper"  style="margin-top: 20px;">pen & pen thickness</div>
+    <div class="pen-thickness">
+      <button type="button" class="btn btn-circle btn-xs btn-secondary"  id = "xs" >
+          <span class="material-symbols-outlined"></span>
+        </button>
+        <button type="button" class="btn btn-circle btn-sm btn-secondary"  id = "sm" >
+          <span class="material-symbols-outlined"></span>
+        </button>
+        <button type="button" class="btn btn-circle btn-md btn-secondary"  id = "md" >
+          <span class="material-symbols-outlined"></span>
+        </button>
+        <button type="button" class="btn btn-circle btn-lg btn-secondary"  id = "lg" >
+          <span class="material-symbols-outlined"></span>
+        </button>
     </div>
+
+
+    <!-- The eraser tool, I used the same format as the thickness -->
+    <div class="sm-wrapper" style="margin-top: 20px;">eraser</div>
+    <div class="pen-thickness">
+      <button type="button" class="btn btn-circle btn-xs btn-light"  id = "eraser-xs" >
+        <span class="material-symbols-outlined"></span>
+      </button>
+        <button type="button" class="btn btn-circle btn-sm btn-light"  id = "eraser-sm" >
+          <span class="material-symbols-outlined"></span>
+        </button>
+        <button type="button" class="btn btn-circle btn-md btn-light"  id = "eraser-md" >
+          <span class="material-symbols-outlined"></span>
+        </button>
+        <button type="button" class="btn btn-circle btn-lg btn-light"  id = "eraser-lg" >
+          <span class="material-symbols-outlined"></span>
+        </button>
+    </div>
+    
+
+    <!-- Where we will add shapes -->
+    <div class="sm-wrapper" style="margin-top: 20px;">shapes</div>
+    <div class="pen-thickness">
+      <button type="button" class="btn btn-circle btn-lg btn-light"  id = "circle" >
+        <span class="material-symbols-outlined"></span>
+      </button>
+      <button type="button" class="btn btn-square-sm btn-light"  id = "square" >
+        <span class="material-symbols-outlined"></span>
+      </button>
+    </div>
+</div>
   
   <!-- Using a wrapper to align content (very important) DONE BY CAEDI-->
   <main>
