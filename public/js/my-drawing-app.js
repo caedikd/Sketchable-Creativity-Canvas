@@ -88,9 +88,9 @@ tool.onMouseDrag = function(event) {
         }));
     }
     else if (triangle === true) {
-        var triangle1 = new Path.RegularPolygon(new Point(80, 70), 3, 50);
+        var triangle1 = new Path.RegularPolygon(event.point, 3, 50);
         path.add(triangle1);
-        decagon1.fillColor = currentColor;
+        triangle1.fillColor = currentColor;
       
     }
     else if (decagon === true) {
